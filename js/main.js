@@ -1,6 +1,6 @@
 let currentCredits = 1000
 let currentBet = 0
-let wager = 10
+let lastWin = 0
 
 const lowerBet = document.getElementById('lower-bet')
 const raiseBet = document.getElementById('raise-bet')
@@ -53,14 +53,17 @@ function onSpinClicked() {
     if (num1 === 3 && num1 === num2 && num1 === num3) {
         currentCredits = currentBet * 3 + currentCredits
         currentBet=0
+        lastWin = currentBet * 3
         console.log('Jackpot!!!')
     } else if (num1 === 2 && num1 === num2 && num1 === num3) {
         currentCredits = currentBet * 2 + currentCredits
         currentBet=0
+        lastWin = currentBet * 2
         console.log('Winner!!')
     } else if (num1 === 1 && num1 === num2 && num1 === num3) {
         currentCredits = currentBet * 2 + currentCredits
         currentBet=0
+        lastWin = currentBet * 2
         console.log('You Win!')
 }else{
     currentBet= 0
@@ -73,7 +76,9 @@ function getRandomNumber() {
 function getElement(id) {
     return document.getElementById(id)
 }
-
+document.getElementsByClassName('current-bet').innerHTML = currentBet
+document.getElementsByClassName('total-credits').innerHTML = currentCredits
+document.getElementsByClassName('last-win').innerHTML = lastWin
 // function gameOver{
 // if(currentBet === 0 && currentCredits === 0)
 // console.log('GameOver')
