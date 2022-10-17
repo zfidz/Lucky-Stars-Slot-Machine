@@ -57,3 +57,23 @@
     border-radius: 10vh;
     background-color: red;
 }
+.display-values{
+    display: inline-flex;
+    margin: 3vh;
+
+}
+.total-credits {
+    width: 10vh;
+    height: 5vh;
+    background-color: yellow;
+}
+.current-bet {
+    width: 10vh;
+    height: 5vh;
+    background-color: yellow; 
+}
+.last-win {
+    width: 10vh;
+    height: 5vh;
+    background-color: yellow; 
+}

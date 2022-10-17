@@ -1,4 +1,4 @@
-let currentChips = 1000
+let currentCredits = 1000
 let currentBet = 0
 let wager = 10
 
@@ -14,13 +14,28 @@ spinWheel.addEventListener('click', onSpinClicked)
 
 
 function onLowerClicked() {
-console.log('lower clicked')
+let minusBet = currentBet - 10
+currentBet = minusBet
+console.log(currentBet)
+let addCredits = currentCredits + 10
+currentCredits = addCredits
+console.log(currentCredits)
 }
+
 function onRaiseClicked() {
-    console.log('raise clicked')
+    let addBet = currentBet + 10
+currentBet = addBet
+console.log(addBet)
+let minusCredits = currentCredits - 10
+currentCredits = minusCredits
+console.log(currentCredits)
 }
 function onMaxClicked() {
-    console.log('max clicked')
+    let maxBet = currentCredits + currentBet
+    currentCredits = maxBet-maxBet
+    console.log(currentCredits)
+    currentBet = maxBet
+    console.log(currentBet)
 }
 function onSpinClicked() {
     const symbolOne= getElement('symbol-one')
@@ -28,21 +43,28 @@ function onSpinClicked() {
     const symbolThree= getElement('symbol-three')
 
     const num1 = getRandomNumber()
-    const num2 = setTimeout(getRandomNumber(), 1000)
-    const num3 = setTimeout(getRandomNumber(), 2000)
+    const num2 = getRandomNumber()
+    const num3 = getRandomNumber()
 
     symbolOne.innerHTML = num1
     symbolTwo.innerHTML = num2
     symbolThree.innerHTML = num3
 
     if (num1 === 3 && num1 === num2 && num1 === num3) {
-        console.log("JACKPOT!")
+        currentCredits = currentBet * 3 + currentCredits
+        currentBet=0
+        console.log('Jackpot!!!')
     } else if (num1 === 2 && num1 === num2 && num1 === num3) {
-    console.log('you win!')
+        currentCredits = currentBet * 2 + currentCredits
+        currentBet=0
+        console.log('Winner!!')
     } else if (num1 === 1 && num1 === num2 && num1 === num3) {
-        console.log('you are a winner')
+        currentCredits = currentBet * 2 + currentCredits
+        currentBet=0
+        console.log('You Win!')
 }else{
-    console.log('try again')
+    currentBet= 0
+    console.log('Try Again.')
 }
 }
 function getRandomNumber() {
@@ -53,7 +75,8 @@ function getElement(id) {
 }
 
 // function gameOver{
-
+// if(currentBet === 0 && currentCredits === 0)
+// console.log('GameOver')
 // }
 
 // function resetGame{
