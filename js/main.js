@@ -1,3 +1,7 @@
+let currentChips = 1000;
+let currentBet = 0
+let wager = 10
+
 const lowerBet = document.getElementById('lower-bet')
 const raiseBet = document.getElementById('raise-bet')
 const maxBet = document.getElementById('max-bet')
@@ -25,3 +29,10 @@ function onSpinClicked() {
     console.log('spin to win')
 }
 
+function gameOver{
+
+}
+
+function resetGame{
+
+}
