@@ -2,6 +2,10 @@ let currentCredits = 1000
 let currentBet = 0
 let lastWin = 0
 
+document.getElementById("current-bet").innerHTML = 'Current Bet: ' + currentBet
+document.getElementById("total-credits").innerHTML = 'Credits: ' + currentCredits
+document.getElementById("last-win").innerHTML = 'Last Win: ' + lastWin
+
 const lowerBet = document.getElementById('lower-bet')
 const raiseBet = document.getElementById('raise-bet')
 const maxBet = document.getElementById('max-bet')
@@ -20,6 +24,7 @@ console.log(currentBet)
 let addCredits = currentCredits + 10
 currentCredits = addCredits
 console.log(currentCredits)
+updateValues()
 }
 
 function onRaiseClicked() {
@@ -29,6 +34,7 @@ console.log(addBet)
 let minusCredits = currentCredits - 10
 currentCredits = minusCredits
 console.log(currentCredits)
+updateValues()
 }
 function onMaxClicked() {
     let maxBet = currentCredits + currentBet
@@ -36,6 +42,7 @@ function onMaxClicked() {
     console.log(currentCredits)
     currentBet = maxBet
     console.log(currentBet)
+    updateValues()
 }
 function onSpinClicked() {
     const symbolOne= getElement('symbol-one')
@@ -60,6 +67,7 @@ function onSpinClicked() {
         currentBet=0
         lastWin = currentBet * 2
         console.log('Winner!!')
+
     } else if (num1 === 1 && num1 === num2 && num1 === num3) {
         currentCredits = currentBet * 2 + currentCredits
         currentBet=0
@@ -69,6 +77,7 @@ function onSpinClicked() {
     currentBet= 0
     console.log('Try Again.')
 }
+updateValues()
 }
 function getRandomNumber() {
     return Math.floor(Math.random() * 3) + 1
@@ -76,9 +85,11 @@ function getRandomNumber() {
 function getElement(id) {
     return document.getElementById(id)
 }
-document.getElementsByClassName('current-bet').innerHTML = currentBet
-document.getElementsByClassName('total-credits').innerHTML = currentCredits
-document.getElementsByClassName('last-win').innerHTML = lastWin
+function updateValues() {
+document.getElementById("current-bet").innerHTML = 'Current Bet: ' + currentBet
+document.getElementById("total-credits").innerHTML = 'Credits: ' + currentCredits
+document.getElementById("last-win").innerHTML = 'Last Win: ' + lastWin
+}
 // function gameOver{
 // if(currentBet === 0 && currentCredits === 0)
 // console.log('GameOver')
