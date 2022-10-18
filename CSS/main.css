@@ -10,7 +10,7 @@
     border-radius: 2vh;
 }
 .symbol-display {
-    margin: 10vh 10vh 3vh 10vh;
+    margin: 10vh 7vw 3vh 7vw;
     width: 60vw;
     height: 30vh;
     background-color: white;
@@ -26,13 +26,43 @@
     background-color: gray;
     display: inline-grid;
 }
-/* .buttons {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-} */
+
+
+
+
+    .display-values {
+display: inline-flex;
+}
+
+#total-credits {
+    margin: 0px 7vw 0vh 7vw;
+    width: 8vw;
+    height: 3vh;
+    background-color: yellow;
+}
+
+#current-bet {
+    margin: 0px 7vw 0vh 7vw;
+    width: 8vw;
+    height: 3vh;
+    background-color: yellow; 
+}
+
+#last-win {
+    margin: 0px 7vw 0vh 7vw;
+    width: 8vw;
+    height: 3vh;
+    background-color: yellow; 
+}
+
+
+
+.buttons {
+
+}
 
 #raise-bet {
+    margin: 5vh 10vw 5vh 10vw; 
     width: 5vw;
     height: 6vh;
     border-style:solid;
@@ -40,11 +70,9 @@
     border-radius: 4vh;
     background-color: blue;
 }
-
 #raise-bet:hover{
     background-color: #2600ce;
 }
-
 #raise-bet:active{
     background-color: #2600ce;
     box-shadow: 0 5px #666;
@@ -59,11 +87,9 @@
     border-radius: 4vh;
     background-color: rgb(255, 2, 2)
 }
-
 #lower-bet:hover{
     background-color: #c50000
 }
-
 #lower-bet:active{
     background-color: #c50000;
     box-shadow: 0 5px #666;
@@ -78,11 +104,9 @@
     border-radius: 4vh;
     background-color: rgb(242, 255, 54)
 }
-
 #max-bet:hover{
     background-color: #c9ae23
 }
-
 #max-bet:active{
     background-color: #c9ae23;
     box-shadow: 0 5px #666;
@@ -97,38 +121,11 @@
     border-radius: 10vh;
     background-color: rgb(30, 255, 0);
 }
-
 #spin-slot:hover {
     background-color: #00b506
 }
-
 #spin-slot:active{
     background-color: #00b506;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
-}
-
-.display-values{
-    /* display: inline-flex; */
-}
-
-#total-credits {
-    margin: 0px 10vw 0vh 10vw;
-    width: 8vw;
-    height: 3vh;
-    background-color: yellow;
-}
-
-#current-bet {
-    margin: 0px 10vw 0vh 10vw;
-    width: 8vw;
-    height: 3vh;
-    background-color: yellow; 
-}
-
-#last-win {
-    margin: 0px 10vw 0vh 10vw;
-    width: 8vw;
-    height: 3vh;
-    background-color: yellow; 
 }
