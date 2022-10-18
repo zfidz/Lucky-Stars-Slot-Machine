@@ -98,6 +98,8 @@ function updateValues() {
 	document.getElementById("current-bet").innerHTML = 'Current Bet: ' + currentBet
 	document.getElementById("total-credits").innerHTML = 'Credits: ' + currentCredits
 	document.getElementById("last-win").innerHTML = 'Last Win: ' + lastWin
+}
+
 // function gameOver{
 // if(currentBet === 0 && currentCredits === 0)
 // console.log('GameOver')
@@ -105,4 +107,4 @@ function updateValues() {
 
 // function resetGame{
 
-// }
+// 
