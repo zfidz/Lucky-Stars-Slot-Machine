@@ -52,6 +52,7 @@ function onSpinClicked() {
 	const symbolOne = getElement('symbol-one')
 	const symbolTwo = getElement('symbol-two')
 	const symbolThree = getElement('symbol-three')
+	const noti = getElement('notification')
 	const num1 = getRandomNumber()
 	// if (num1 === 1) {
 	// 	num1 = "Hello"
@@ -76,20 +77,32 @@ function onSpinClicked() {
 			currentCredits = currentBet * 3 + currentCredits
 			lastWin = currentBet * 3
 			currentBet = 0
-			console.log('Jackpot!!!')
+			noti.innerHTML= 'Jackpot!!!'
+			setTimeout(function() {
+				noti.innerHTML = ''
+			}, 1500)
 		} else if (num1 === 2 && num1 === num2 && num1 === num3) {
 			currentCredits = currentBet * 2 + currentCredits
 			lastWin = currentBet * 2
 			currentBet = 0
-			console.log('Winner!!')
+			noti.innerHTML= 'Winner!!'
+			setTimeout(function() {
+				noti.innerHTML = ''
+			}, 1500)
 		} else if (num1 === 1 && num1 === num2 && num1 === num3) {
 			currentCredits = currentBet * 2 + currentCredits
 			lastWin = currentBet * 2
 			currentBet = 0
-			console.log('You Win!')
+			noti.innerHTML= 'You Win!'
+			setTimeout(function() {
+				noti.innerHTML = ''
+			}, 1500)
 		} else {
 			currentBet = 0
-			console.log('Try Again.')
+			noti.innerHTML= 'Try Again!'
+			setTimeout(function() {
+				noti.innerHTML = ''
+			}, 1500)
 		}
 		updateValues()
 		gameOver()
