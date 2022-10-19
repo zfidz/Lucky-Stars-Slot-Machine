@@ -5,10 +5,12 @@ document.getElementById("current-bet").innerHTML = 'My Bet: ' + currentBet
 document.getElementById("total-credits").innerHTML = 'Credits: ' + currentCredits
 document.getElementById("last-win").innerHTML = 'Last Win: ' + lastWin
 const lowerBet = document.getElementById('lower-bet')
+const reset = document.getElementById('reset')
 const raiseBet = document.getElementById('raise-bet')
 const maxBet = document.getElementById('max-bet')
 const spinWheel = document.getElementById('spin-slot')
 lowerBet.addEventListener('click', onLowerClicked)
+reset.addEventListener('click', resetGame)
 raiseBet.addEventListener('click', onRaiseClicked)
 maxBet.addEventListener('click', onMaxClicked)
 spinWheel.addEventListener('click', onSpinClicked)
@@ -83,6 +85,7 @@ function onSpinClicked() {
 			console.log('Try Again.')
 		}
 		updateValues()
+		gameOver()
 	}, 2500)
 }
 
@@ -100,11 +103,13 @@ function updateValues() {
 	document.getElementById("last-win").innerHTML = 'Last Win: ' + lastWin
 }
 
-// function gameOver{
-// if(currentBet === 0 && currentCredits === 0)
-// console.log('GameOver')
-// }
+function gameOver(){
+if(currentBet === 0 && currentCredits === 0)
+console.log('GameOver')
+}
 
-// function resetGame{
-
-// 
+function resetGame(){
+	currentCredits = 1000
+	currentBet = 0
+	lastWin = 0
+}
