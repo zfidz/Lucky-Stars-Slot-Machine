@@ -2,7 +2,6 @@ body {
     display: flex;
     justify-content: center;
 }
-
 .background {
     display:flex;
     flex-wrap: wrap;
@@ -39,18 +38,15 @@ body {
 .display-values {
     width: 60vw;
     height: 7vh;
-    background-color: #c9ae23;
 	display: flex;
     justify-content: space-between;
 }
 #total-credits {
-	/* margin: 0px 7vw 0vh 7vw; */
 	width: 15vw;
 	height: 7vh;
 	background-color: yellow;
 }
 #last-win {
-	/* margin: 0px 7vw 0vh 7vw; */
 	width: 15vw;
 	height: 7vh;
 	background-color: yellow;
@@ -60,7 +56,6 @@ body {
     justify-content: center;
     width: 60vw;
     height: 10vh;
-    background-color: #2600ce;
 }
 #raise-bet {
 	width: 8vw;
