@@ -1,7 +1,7 @@
 let currentCredits = 1000
 let currentBet = 0
 let lastWin = 0
-document.getElementById("current-bet").innerHTML = 'Current Bet: ' + currentBet
+document.getElementById("current-bet").innerHTML = 'My Bet: ' + currentBet
 document.getElementById("total-credits").innerHTML = 'Credits: ' + currentCredits
 document.getElementById("last-win").innerHTML = 'Last Win: ' + lastWin
 const lowerBet = document.getElementById('lower-bet')
