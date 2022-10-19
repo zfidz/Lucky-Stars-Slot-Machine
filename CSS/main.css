@@ -1,16 +1,15 @@
 body {
-    display: flex;
-    justify-content: center;
+	display: flex;
+	justify-content: center;
 	background-color: #0e004a;
-
 }
 .background {
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 	width: 75vw;
 	height: 90vh;
-	background-image:url('../images/space.png');	
+	background-image: url('../images/space.png');
 	background-position: center;
 	background-size: 170vh;
 	border-style: solid;
@@ -19,9 +18,10 @@ body {
 	border-radius: 2vh;
 }
 .symbol-display {
-    margin-top: 5vh;
-    display: flex;
-    justify-content: space-evenly;
+	margin-top: 5vh;
+	font-size: 5vh;
+	display: flex;
+	justify-content: space-evenly;
 	width: 60vw;
 	height: 30vh;
 }
@@ -38,29 +38,30 @@ body {
 	font-family: 'Press Start 2P';
 	font-size: 3vh;
 	text-align: center;
-    width: 60vw;
-    height: 7vh;
+	width: 60vw;
+	height: 7vh;
 	display: flex;
-    justify-content: space-between;
+	justify-content: space-between;
+	color: white;
 }
+#notification {
+	background-color: rgba(0, 0, 0, 0.834)
+}
+
 #total-credits {
 	width: 15vw;
 	height: 7vh;
-	color: white;
-	background-color: rgba(0, 0, 0, 0.834);
+background-color: rgba(0, 0, 0, 0.834);
 }
 #last-win {
 	width: 15vw;
 	height: 7vh;
-	color: white;
 	background-color: rgba(0, 0, 0, 0.834);
 }
 .bet-buttons {
-    display: flex;
+	display: flex;
 	transform: translateY(6vh);
 }
-
-
 #current-bet {
 	font-family: 'Press Start 2P';
 	font-size: 3vh;
@@ -78,7 +79,7 @@ body {
 	vertical-align: middle;
 	width: 8vw;
 	height: 9vh;
-	border-style:none;
+	border-style: none;
 	background-color: rgba(0, 0, 255, 0);
 }
 #raise-bet:active {
@@ -96,7 +97,6 @@ body {
 	border-style: solid;
 	background-color: rgba(255, 2, 2, 0)
 }
-
 #lower-bet:active {
 	background-color: #c5000000;
 	transform: translateY(4px);
@@ -108,10 +108,8 @@ body {
 	border-width: 1vh;
 	border-radius: 4.5vh;
 	background-color: rgb(242, 255, 54);
-    margin-left: 20vw;
-    
+	margin-left: 20vw;
 }
-
 #max-bet:active {
 	background-color: #c9ae23;
 	box-shadow: 0 5px #666;
@@ -132,11 +130,11 @@ body {
 	transform: translateY(4px);
 }
 .break {
-    flex-basis: 100%;
-    height: 0;
-  }
-  #reset {
-width: 3vw;
-height: 2vh;
-position:absolute;
-  }
+	flex-basis: 100%;
+	height: 0;
+}
+#reset {
+	width: 3vw;
+	height: 2vh;
+	position: absolute;
+}

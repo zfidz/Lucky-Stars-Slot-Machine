@@ -53,6 +53,13 @@ function onSpinClicked() {
 	const symbolTwo = getElement('symbol-two')
 	const symbolThree = getElement('symbol-three')
 	const num1 = getRandomNumber()
+	// if (num1 === 1) {
+	// 	num1 = "Hello"
+	// }else if (num1 === 2) {
+	// 	num1 = "Goodbye"
+	// }else {
+	// 	num1 = "Jackpot!"
+	// }
 	const num2 = getRandomNumber()
 	const num3 = getRandomNumber()
 	setTimeout(function() {
