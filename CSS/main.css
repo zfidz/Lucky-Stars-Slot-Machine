@@ -57,8 +57,9 @@ background-color: rgba(0, 0, 0, 0.834);
 	background-color: rgba(0, 0, 0, 0.834);
 }
 .bet-buttons {
+	margin: 0vh, 0vw, 0vh, 0vw;
 	display: flex;
-	transform: translateY(6vh);
+	transform: translateX(-5vh);
 }
 #current-bet {
 	font-family: 'Press Start 2P';
@@ -100,12 +101,15 @@ background-color: rgba(0, 0, 0, 0.834);
 	transform: translateY(4px);
 }
 #max-bet {
+	font-family: "Press Start 2P";
+	font-size: 2vh;
 	width: 8vw;
-	height: 9vh;
-	border-style: solid;
-	border-width: 1vh;
-	border-radius: 4.5vh;
-	background-color: rgb(242, 255, 54);
+	height: 14vh;
+	border-style: none;
+	background-image: url(../images/Star.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-color: #c5000000;
 	margin-left: 20vw;
 }
 #max-bet:active {
