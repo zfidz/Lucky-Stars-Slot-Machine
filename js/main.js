@@ -50,6 +50,9 @@ function onMaxClicked() {
 }
 
 function onSpinClicked() {
+	symbolOne.style.backgroundImage = ""
+	symbolTwo.style.backgroundImage = ""
+	symbolThree.style.backgroundImage = ""
 	if (currentBet === 0) {
 		document.getElementById('notification').innerHTML = 'Please Enter Bet'
 		setTimeout(function() {
@@ -98,7 +101,7 @@ function onSpinClicked() {
 				}, 1500)
 			} else if (num1 === 2 && num1 === num2 && num1 === num3) {
 				currentCredits = currentBet * 4 + currentCredits
-				lastWin = currentBet * 4
+				lastWin = currentBet * 6
 				currentBet = 0
 				noti.innerHTML = 'Winner!!'
 				setTimeout(function() {
@@ -147,5 +150,9 @@ function resetGame() {
 	currentCredits = 1000
 	currentBet = 0
 	lastWin = 0
+	document.getElementById('notification').innerHTML = ''
+	symbolOne.style.backgroundImage = ""
+	symbolTwo.style.backgroundImage = ""
+	symbolThree.style.backgroundImage = ""
 	updateValues()
 }
