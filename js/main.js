@@ -53,24 +53,38 @@ function onSpinClicked() {
 	const symbolTwo = getElement('symbol-two')
 	const symbolThree = getElement('symbol-three')
 	const noti = getElement('notification')
-	const num1 = getRandomNumber()
-	// if (num1 === 1) {
-	// 	num1 = "Hello"
-	// }else if (num1 === 2) {
-	// 	num1 = "Goodbye"
-	// }else {
-	// 	num1 = "Jackpot!"
-	// }
-	const num2 = getRandomNumber()
-	const num3 = getRandomNumber()
+	let num1 = getRandomNumber()
+	
+	let num2 = getRandomNumber()
+	let num3 = getRandomNumber()
+
+
 	setTimeout(function() {
-		symbolOne.innerHTML = num1
+		if (num1 === 1) {
+			symbolOne.style.backgroundImage = "url('images/Astronaut.png')"
+		}else if (num1 === 2) {
+			symbolOne.style.backgroundImage = "url('images/Rocket.png')"
+		}else if (num1 === 3) {
+			symbolOne.style.backgroundImage = "url('images/Saturn.png')"
+		}
 	}, 750)
 	setTimeout(function() {
-		symbolTwo.innerHTML = num2
+		if (num2 === 1) {
+			symbolTwo.style.backgroundImage = "url('images/Astronaut.png')"
+		}else if (num2 === 2) {
+			symbolTwo.style.backgroundImage = "url('images/Rocket.png')"
+		}else if (num2 === 3) {
+			symbolTwo.style.backgroundImage = "url('images/Saturn.png')"
+		}
 	}, 1500)
 	setTimeout(function() {
-		symbolThree.innerHTML = num3
+		if (num3 === 1) {
+			symbolThree.style.backgroundImage = "url('images/Astronaut.png')"
+		}else if (num3 === 2) {
+			symbolThree.style.backgroundImage = "url('images/Rocket.png')"
+		}else if (num3 === 3) {
+			symbolThree.style.backgroundImage = "url('images/Saturn.png')"
+		}
 	}, 2250)
 	setTimeout(function() {
 		if (num1 === 3 && num1 === num2 && num1 === num3) {
