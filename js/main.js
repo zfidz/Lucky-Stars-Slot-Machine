@@ -1,6 +1,9 @@
 let currentCredits = 1000
 let currentBet = 0
 let lastWin = 0
+const symbolOne = document.getElementById('symbol-one')
+const symbolTwo = document.getElementById('symbol-two')
+const symbolThree = document.getElementById('symbol-three')
 document.getElementById("current-bet").innerHTML = 'My Bet: ' + currentBet
 document.getElementById("total-credits").innerHTML = 'Credits: ' + currentCredits
 document.getElementById("last-win").innerHTML = 'Last Win: ' + lastWin
@@ -42,19 +45,18 @@ function onRaiseClicked() {
 function onMaxClicked() {
 	let maxBet = currentCredits + currentBet
 	currentCredits = maxBet - maxBet
-	console.log(currentCredits)
 	currentBet = maxBet
-	console.log(currentBet)
 	updateValues()
 }
 
 function onSpinClicked() {
-	const symbolOne = getElement('symbol-one')
-	const symbolTwo = getElement('symbol-two')
-	const symbolThree = getElement('symbol-three')
-	const noti = getElement('notification')
+	if (currentBet === 0) {
+		document.getElementById('notification').innerHTML ='Please Enter Bet'
+		setTimeout(function()	{
+			document.getElementById('notification').innerHTML =''}, 1500)
+	}else{
+	const noti = document.getElementById('notification')
 	let num1 = getRandomNumber()
-	
 	let num2 = getRandomNumber()
 	let num3 = getRandomNumber()
 
@@ -88,49 +90,48 @@ function onSpinClicked() {
 	}, 2250)
 	setTimeout(function() {
 		if (num1 === 3 && num1 === num2 && num1 === num3) {
-			currentCredits = currentBet * 3 + currentCredits
-			lastWin = currentBet * 3
+			currentCredits = currentBet * 10 + currentCredits
+			lastWin = currentBet * 10
 			currentBet = 0
 			noti.innerHTML= 'Jackpot!!!'
 			setTimeout(function() {
 				noti.innerHTML = ''
 			}, 1500)
 		} else if (num1 === 2 && num1 === num2 && num1 === num3) {
-			currentCredits = currentBet * 2 + currentCredits
-			lastWin = currentBet * 2
+			currentCredits = currentBet * 4 + currentCredits
+			lastWin = currentBet * 4
 			currentBet = 0
 			noti.innerHTML= 'Winner!!'
 			setTimeout(function() {
 				noti.innerHTML = ''
 			}, 1500)
 		} else if (num1 === 1 && num1 === num2 && num1 === num3) {
-			currentCredits = currentBet * 2 + currentCredits
-			lastWin = currentBet * 2
+			currentCredits = currentBet * 4 + currentCredits
+			lastWin = currentBet * 4
 			currentBet = 0
 			noti.innerHTML= 'You Win!'
 			setTimeout(function() {
 				noti.innerHTML = ''
 			}, 1500)
 		} else {
-			currentBet = 0
+			if (currentCredits > 0){
 			noti.innerHTML= 'Try Again!'
+			currentBet = 0
 			setTimeout(function() {
 				noti.innerHTML = ''
 			}, 1500)
+		}else{
+			currentBet=0
+		gameOver()
+		}
 		}
 		updateValues()
-		gameOver()
 	}, 2500)
 }
-
+}
 function getRandomNumber() {
 	return Math.floor(Math.random() * 3) + 1
 }
-
-function getElement(id) {
-	return document.getElementById(id)
-}
-
 function updateValues() {
 	document.getElementById("current-bet").innerHTML = 'Current Bet: ' + currentBet
 	document.getElementById("total-credits").innerHTML = 'Credits: ' + currentCredits
@@ -139,11 +140,12 @@ function updateValues() {
 
 function gameOver(){
 if(currentBet === 0 && currentCredits === 0)
-console.log('GameOver')
+document.getElementById('notification').innerHTML ='GAME OVER'
 }
 
 function resetGame(){
 	currentCredits = 1000
 	currentBet = 0
 	lastWin = 0
+	updateValues()
 }
