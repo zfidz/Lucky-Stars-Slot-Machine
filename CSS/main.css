@@ -1,10 +1,13 @@
 body {
 	display: flex;
 	justify-content: center;
+	color: white;
 	background-color: #0e004a;
 }
+
 .background {
 	display: flex;
+	text-align: center;
 	flex-wrap: wrap;
 	justify-content: center;
 	width: 75vw;
@@ -17,8 +20,14 @@ body {
 	border-color: black;
 	border-radius: 2vh;
 }
+h1 {
+	font-family: 'Bungee Shade';
+	position: fixed;
+	font-size: 10vh;
+	transform: translateY(-14vh);
+}
 .symbol-display {
-	margin-top: 5vh;
+	margin-top: 10vh;
 	font-size: 5vh;
 	display: flex;
 	justify-content: space-evenly;
@@ -40,7 +49,6 @@ body {
 	height: 7vh;
 	display: flex;
 	justify-content: space-between;
-	color: white;
 }
 #notification {
 	background-color: rgba(0, 0, 0, 0.834)
@@ -64,7 +72,6 @@ background-color: rgba(0, 0, 0, 0.834);
 #current-bet {
 	font-family: 'Press Start 2P';
 	font-size: 3vh;
-	color: white;
 	text-align: center;
 	width: 15vw;
 	height: 7vh;
@@ -113,7 +120,6 @@ background-color: rgba(0, 0, 0, 0.834);
 	margin-left: 20vw;
 }
 #max-bet:active {
-	background-color: #c9ae23;
 	box-shadow: 0 5px #666;
 	transform: translateY(4px);
 }
