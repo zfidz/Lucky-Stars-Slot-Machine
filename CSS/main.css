@@ -21,10 +21,11 @@ body {
 	border-radius: 2vh;
 }
 h1 {
+	color: rgb(154, 3, 157);
 	font-family: 'Bungee Shade';
 	position: fixed;
 	font-size: 10vh;
-	transform: translateY(-14vh);
+	transform: translateY(-15vh);
 }
 .symbol-display {
 	margin-top: 10vh;
@@ -132,17 +133,22 @@ background-color: rgba(0, 0, 0, 0.834);
 	background-image: url(../images/launch-button.png);
 	background-position: center;
 	background-size: 200%;
+	transform: translateX(-5.1vh);
 }
 #spin-slot:active {
 	box-shadow: 0 5px #666;
-	transform: translateY(4px);
+	transform: translate(-5.1vh,4px);
 }
 .break {
 	flex-basis: 100%;
 	height: 0;
 }
 #reset {
-	width: 3vw;
-	height: 2vh;
-	position: absolute;
+	font-family: 'Press Start 2P';
+	font-size: 3vh;
+	width: 6vw;
+	height: 4vh;
+	transform: translate(-29vw, 8vw);
+	background-color: rgba(0, 0, 0, 0);
+	color: rgb(154, 3, 157);
 }
