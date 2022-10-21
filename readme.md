@@ -19,7 +19,7 @@ If you run out of credits it is game over.
 ![image](planning/p1-wireframe.png)
 
 ## Screenshot
-![image](planning/screenshot.png)
+![image](images/screenshot.png)
 
 ## Future Considerations
  - add animation to slot
