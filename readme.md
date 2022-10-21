@@ -8,7 +8,7 @@ My version of the classic slot machine with a space theme.
 https://zfidz.github.io/Slot-Machine--Project-1/
 
 ## Game Rules
-Start the game by pressing the + or minus buttons to raise or lower your bet. Alternatively you can press the "Max Bet" star to bet all of your credits.
+Start the game by pressing the + or - buttons to raise or lower your bet. Alternatively you can press the "Max Bet" star to bet all of your credits.
 Next press the "Launch" button.
 If you run out of credits it is game over.
 
