@@ -152,3 +152,16 @@ background-color: rgba(0, 0, 0, 0.834);
 	background-color: rgba(0, 0, 0, 0);
 	color: rgb(154, 3, 157);
 }
+
+@keyframes spin {
+	0% {
+	  transform: rotateX(0);
+	}
+	100% {
+	  transform: rotateX(720deg);
+	}
+  }
+  
+  .spin {
+	animation: spin 3s ease-in-out forwards;
+  }
