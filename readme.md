@@ -5,7 +5,7 @@
 ## Background
 My version of the classic slot machine with a space theme.
 
-https://zfidz.github.io/Slot-Machine--Project-1/
+https://zfidz.github.io/Lucky-Stars-Slot-Machine/
 
 ## Game Rules
 Start the game by pressing the + or - buttons to raise or lower your bet. Alternatively you can press the "Max Bet" star to bet all of your credits.
