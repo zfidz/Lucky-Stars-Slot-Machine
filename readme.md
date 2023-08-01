@@ -17,9 +17,9 @@ Once you've set your course, ignite the engines and press the "Launch" button to
 Remember, when your credits fall to zero, your space odyssey will come to a screeching halt. Choose your bets wisely, for the stars hold both fortune and fate.
 
 ## Winning Combos
-- 💫 3x Astronauts = 4 times the size of your bet ✨
-- 🚀 3x Rockets = 6 times the size of your bet 🌠
-- 🪐 3x Saturns = 10 times the size of your bet 🌌
+- 💫 **3x Astronauts** = 4 times the size of your bet ✨
+- 🚀 **3x Rockets** = 6 times the size of your bet 🌠
+- 🪐 **3x Saturns** = 10 times the size of your bet 🌌
 
 ## Wireframe
 
